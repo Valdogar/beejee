@@ -3,7 +3,7 @@
 - скачать/распаковать проект
 - в папке проекта:
 
-1. `sudo docker-compose build`
+1. `sudo docker-compose -f docker-compose-dev.yml build`
 2. `sudo docker-compose -f docker-compose-dev.yml up -d`//запуск контейнеров докера
 
 4. `sudo su`
