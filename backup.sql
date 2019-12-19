@@ -43,6 +43,7 @@ CREATE TABLE `tasks` (
   `email` varchar(100) COLLATE utf8mb4_bin DEFAULT NULL,
   `text` varchar(100) COLLATE utf8mb4_bin DEFAULT NULL,
   `status` tinyint(1) DEFAULT '0',
+  `edited` tinyint(1) DEFAULT '0',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 /*!40101 SET character_set_client = @saved_cs_client */;
