@@ -4,18 +4,16 @@
 - в папке проекта:
 
 1. `sudo docker-compose build`
-2. `sudo docker-compose up -d`
+2. `sudo docker-compose -f docker-compose-dev.yml up -d`//запуск контейнеров докера
 
 4. `sudo su`
-5.  `cat backup.sql | docker exec -i CONTAINER /usr/bin/mysql -u root --password=123456 test`// восстановление базы MySQL
+5.  `cat backup.sql | docker exec -i CONTAINER /usr/bin/mysql -u root --password=123456 beejee`// восстановление базы MySQL
+7. `sudo docker exec -ti CONTAINER_MYSQL bash`
+8. `mysql -u root -p beejee` // пароль "123456"
+9. в командной линии mysql: 
+ `INSERT INTO beejee.admins (id,login,password)
+	VALUES (1,'admin','d9b1d7db4cd6e70935368a1efb10e377');` //добавление админа на сайт
 
-8. `sudo docker exec -ti CONTAINER bash` // заходим в контейнер PHP 5.6
-9. `php -S 0.0.0.0:8000 htaccess.php` // запускаем встроенный сервер
-- в дальнейшем использовать только 2, 5 и 6 пункты.
--  Переходим сюда http://localhost:8000/register
-- регистрируемся/логинимся/my page/
-- создаем темы ( а кто говорил, что будет легко?)
-- создаем ресурсы.
 
 ###Все должно работать, но это не точно.
 
