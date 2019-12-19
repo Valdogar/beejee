@@ -1,3 +1,0 @@
-INSERT INTO beejee.admins (id,login,password)
-	VALUES (1,'admin','d9b1d7db4cd6e70935368a1efb10e377');
-
